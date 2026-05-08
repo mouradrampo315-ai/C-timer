@@ -1,0 +1,96 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Console.WriteLine("please enter your name :");
+                string name = Console.ReadLine();
+                if (name.Any(char.IsWhiteSpace) || string.IsNullOrEmpty(name))
+                {
+                    Console.WriteLine("error please chick yoyr name again !");
+                }
+                else
+                {
+                    Console.WriteLine("nice to meet you " + name);
+                }
+                break;
+
+            }
+
+            Console.WriteLine("are you really need unbluck (yes|no) ");
+            string choose = Console.ReadLine();
+            if (choose == "yes")
+            {
+                Console.WriteLine("okey whit !");
+
+                int total_secounds = 180;
+                Console.WriteLine("time has started !");
+                while (total_secounds > 0)
+                {
+                    int minutes = total_secounds / 60;
+                    int seconds = total_secounds % 60;
+
+                    Console.Write($"\r time:{minutes:D2}:{seconds:D2}");
+                    Thread.Sleep(1000);
+                    total_secounds--;
+
+
+                }
+
+
+            }
+            else
+            {
+                Console.WriteLine("your a strong man");
+            }
+            
+            
+
+            
+            
+
+
+          
+
+                
+                
+                   
+                
+                
+                
+                
+                
+
+
+
+
+
+
+
+
+            
+            
+
+
+
+
+
+
+
+
+
+
+        }
+    }
+}
